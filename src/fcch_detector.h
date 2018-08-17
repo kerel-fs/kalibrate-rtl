@@ -46,6 +46,9 @@
 #include "circular_buffer.h"
 #include "usrp_complex.h"
 
+#define GSM_RATE (1625000.0 / 6.0)
+#define FFT_SIZE 1024
+
 class fcch_detector {
 
 public:
@@ -65,8 +68,6 @@ public:
 	unsigned int x_purge(unsigned int);
 
 private:
-#define GSM_RATE (1625000.0 / 6.0)
-#define FFT_SIZE 1024
 
 	unsigned int	m_w_len,
 			m_D,
